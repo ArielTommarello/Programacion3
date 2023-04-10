@@ -29,6 +29,10 @@ public class Main {
        circ.ImprimirCirculo();
        cuad.ImprimirCuadrado();
 
+        System.out.println("-----------------------------------------------------");
+        System.out.println("                     Ejercicio2                       ");
+
+       //Ejercicio2
 
 
     }
