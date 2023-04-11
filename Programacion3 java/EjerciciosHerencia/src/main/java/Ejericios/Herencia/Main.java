@@ -34,6 +34,39 @@ public class Main {
 
        //Ejercicio2
 
+        Empleado Pepe = new Empleado();
+        Gerente PepeGerente = new Gerente();
+        BonoA BonoPepe = new BonoA();
+        BonoB BonoBPepe = new BonoB();
+
+        Pepe.setNombre("Pepe");
+        BonoPepe.setBono(false);
+        BonoBPepe.setBono(true);
+        Pepe.setAusentes(5);
+
+        Resultado resPepe = new ResCero();
+        resPepe.setResultado(true);
+        resPepe.setOp(1);
+
+        PepeGerente.calcularSueldoNeto();
+        Pepe.setCat(PepeGerente);
+
+        if (BonoPepe.isBono()) {
+            Pepe.setPres(BonoPepe);
+        }
+
+        if(BonoBPepe.isBono()){
+            Pepe.setPres(BonoBPepe);
+        }
+
+        Pepe.setRes(resPepe);
+
+        Sueldo s = new Sueldo();
+
+        Double sueldo = s.calcularSueldo(Pepe);
+        System.out.println("Nombre del empleado: " + Pepe.getNombre());
+        System.out.println("Sueldo : " + sueldo);
+
 
     }
 }
