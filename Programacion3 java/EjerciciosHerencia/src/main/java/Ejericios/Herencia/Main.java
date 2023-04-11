@@ -1,5 +1,6 @@
 package Ejericios.Herencia;
 import Ejericios.Herencia.entity.FigurasGeometricas.*;
+import Ejericios.Herencia.entity.Sueldos.*;
 public class Main {
     public static void main(String[] args) {
 

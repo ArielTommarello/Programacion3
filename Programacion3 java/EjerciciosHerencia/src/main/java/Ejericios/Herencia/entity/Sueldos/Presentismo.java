@@ -12,7 +12,7 @@ public abstract  class Presentismo {
         this.bono = bono;
     }
 
-    public abstract double calcularBono(Integer ausentes);
+    public abstract double calcularBono(double ausentes);
 
 
 }
