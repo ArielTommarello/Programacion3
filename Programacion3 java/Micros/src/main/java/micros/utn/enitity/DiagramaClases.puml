@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+Persona ---|> Micro
+
+Persona <|--- Apurados
+Persona <|--- Claustrofobicos
+Persona <|--- Fiacas
+Persona <|--- Obsecuentes
+Persona <|--- Jefe
+
+class Micro{
+-cantParados
+-cantSentados
+-Volumen
+-libres
+
+}
+
+class Persona{}
+
+class Apurados{}
+
+class Claustrofobicos{}
+
+class Fiacas{}
+
+class Obsecuentes{}
+
+class Moderados{
+-cantAsientosLibres
+}
+
+class Jefe{}
+
+@enduml
