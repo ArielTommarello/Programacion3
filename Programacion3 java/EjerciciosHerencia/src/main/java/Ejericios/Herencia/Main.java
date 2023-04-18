@@ -163,7 +163,7 @@ public class Main {
         Catalina.getCelular().RecargarCelular();
         System.out.println("-----------------------------------------------------");
         System.out.println("-----------------------------------------------------");
-        System.out.println("Thats all folks");
+        System.out.println("........");
 
     }
 }

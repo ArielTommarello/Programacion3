@@ -36,9 +36,14 @@ public class Iphone extends Celular{
         return true;
     }
 
+    public double GetBat()
+    {
+        return 0.001*this.getDuracion();
+    }
+
     @Override
     public void Llamada() {
-        this.setBateria(this.getBateria()-(0.001*this.getDuracion()));
+        this.setBateria(this.getBateria()-this.GetBat());
         System.out.println("Su bateria a bajado!!!!! - Bateria actual: "+this.ConsultarBat());
 
     }
