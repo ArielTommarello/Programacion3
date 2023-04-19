@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Libro <|--- Informatica
+Libro <|--- Filosofia
+Libro <|--- Matematica
+Libro <|--- OtrosLibros
+Prestamo <|--- Libro
+
+
+
+class Prestamo{
+
++public static final Integer LIBROS_TOTALES
++Libro libro
++String personaPrestamo
++bool estado
++Integer fechaInicio
+----
+-calcularPrestamo():Integer
+-calcularTerminoPrestamo():Integer
+-calcularLibrosBiblioteca():Integer
+-ImprimirNombrePrestamo():String
+
+}
+
+abstract class Libro{
+
++String nombre
++String categoria
++Integer capitulos
++Integer totalPrestamo
+----
++calcularTotalPrestamo(Integer capitulos):Integer
+
+}
+
+class Informatica{
++calcularTotalPrestamo(Integer capitulos):Integer
+}
+
+class Filosofia{
++calcularTotalPrestamo(Integer capitulos):Integer
+}
+
+class Matematica{
++calcularTotalPrestamo(Integer capitulos):Integer
+}
+
+class OtrosLibros{
++calcularTotalPrestamo(Integer capitulos):Integer
+}
+
+
+
+@enduml
