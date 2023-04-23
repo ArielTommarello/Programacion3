@@ -1,0 +1,65 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Pedido{
+-private entrada :String
+-private platoPrincipal :String
+-private postre :String
+-private cantEntrada : Integer
+-private cantPrincipal :Integer
+-private cantPostre :Integer
+----
++setEntrada(String):void
++setplatoPrincipal(String):void
++setPostre(String):void
++setcantEntrada(Integer):void
++setcantPrincipal(Integer):void
++setcantPostre(Integer):void
++getEntrada():String
++getPlatoPrincipal():String
++getPostre():String
++getCantEntrada():Integer
++getCantPrincipal():Integer
++getCantPostre():Integer
+
+
+}
+
+
+class Cocina{
+
+ArrayList<Menu>:Menu
+
+
+
+}
+
+
+
+class Menu{
+
+-private entrada :String
+-private platoPrincipal :String
+-private postre :String
+-private cantEntrada : Integer
+-private cantPrincipal :Integer
+-private cantPostre :Integer
+----
++setEntrada(String):void
++setplatoPrincipal(String):void
++setPostre(String):void
++setcantEntrada(Integer):void
++setcantPrincipal(Integer):void
++setcantPostre(Integer):void
++getEntrada():String
++getPlatoPrincipal():String
++getPostre():String
++getCantEntrada():Integer
++getCantPrincipal():Integer
++getCantPostre():Integer
+}
+
+
+
+
+@enduml

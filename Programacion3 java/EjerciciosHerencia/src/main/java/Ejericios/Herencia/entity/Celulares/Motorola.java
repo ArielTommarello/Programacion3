@@ -6,6 +6,7 @@ public class Motorola extends Celular{
         this.setMarca("Motorola");
         this.setModelo("G5");
         this.setBateria(Celular.BAT_TOTAL_CINCO );
+        this.setDuracion(0.25);
     }
 
 
@@ -22,9 +23,12 @@ public class Motorola extends Celular{
         }
        return true;
     }
-     public double GetBat()
+
+
+    @Override
+    public double GetBat()
      {
-         return 0.25;
+        return this.getDuracion();
      }
 
     @Override

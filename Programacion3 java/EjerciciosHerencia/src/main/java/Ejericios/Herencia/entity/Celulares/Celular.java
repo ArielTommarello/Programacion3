@@ -7,6 +7,8 @@ private String marca;
 private String modelo;
 private double bateria;
 
+private double duracion;
+
 
     public String getMarca() {
         return marca;
@@ -31,6 +33,14 @@ private double bateria;
     public void setBateria(double bateria) {
         this.bateria = bateria;
     }
+    public double getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(double duracion) {
+        this.duracion = duracion;
+    }
+
 
 
     public abstract double ConsultarBat();
@@ -39,5 +49,7 @@ private double bateria;
     public abstract void Llamada();
 
     public abstract void RecargarCelular();
+
+    public abstract double GetBat();
 
 }

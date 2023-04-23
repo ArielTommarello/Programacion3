@@ -9,18 +9,9 @@ public class Iphone extends Celular{
         this.setMarca("Iphone");
         this.setModelo("Pro 14 MAX PRO PROFESIONAL");
         this.setBateria(Celular.BAT_TOTAL_CINCO );
-        this.duracion=duracion;
+
     }
 
-
-
-    public double getDuracion() {
-        return duracion;
-    }
-
-    public void setDuracion(double duracion) {
-        this.duracion = duracion;
-    }
 
 
     @Override
@@ -36,6 +27,7 @@ public class Iphone extends Celular{
         return true;
     }
 
+    @Override
     public double GetBat()
     {
         return 0.001*this.getDuracion();
