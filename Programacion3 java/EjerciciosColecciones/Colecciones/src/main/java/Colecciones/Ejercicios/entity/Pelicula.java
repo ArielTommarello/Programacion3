@@ -73,14 +73,27 @@ public class Pelicula {
         this.visualizacion = visualizacion;
     }
 
+
+    public  Integer calculadorAnios(){
+        return(2023-this.getFecha().getAnio());
+    }
+
     public Integer puntaje()
     {
-        return 0;
+        return (this.visualizacion*1000/this.calculadorAnios());
     }
 
     public void visualizar(){
-        this.setVisualizacion(this.getVisualizacion()+1);
+        this.visualizacion++;
     }
+
+
+    public void MostrarPuntaje(){
+        System.out.println("Pelicula: "+this.getTitulo());
+        System.out.println("Puntaje: "+this.puntaje());
+        System.out.println("----------------------------");
+    }
+
 
 
 }
