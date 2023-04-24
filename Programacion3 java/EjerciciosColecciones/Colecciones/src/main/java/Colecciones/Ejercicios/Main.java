@@ -1,8 +1,11 @@
 package Colecciones.Ejercicios;
 
+import Colecciones.Ejercicios.entity.CriterioOrdenDescEstreno;
+import Colecciones.Ejercicios.entity.CriterioOrdenVisualizaciones;
 import Colecciones.Ejercicios.entity.Fecha;
 import Colecciones.Ejercicios.entity.Pelicula;
 
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class Main {
@@ -50,10 +53,24 @@ public class Main {
         pel.get(4).visualizar();
 
 
-        //.........
+        //.........Impresion
         for (int i=0;i<pel.size();i++){
             pel.get(i).MostrarPuntaje();
         }
+        //Ordenar Asc Visualizacion
+        Collections.sort(pel,new CriterioOrdenVisualizaciones());
+        for (int i=0;i<pel.size();i++){
+            pel.get(i).MostrarPelicula();
+        }
+
+        System.out.println(".........................");
+
+        //Ordenar Desc Estreno
+        Collections.sort(pel,new CriterioOrdenDescEstreno());
+        for (int i=0;i<pel.size();i++){
+            pel.get(i).MostrarPelicula();
+        }
+        System.out.println(".........................");
 
 
     }

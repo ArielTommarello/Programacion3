@@ -94,6 +94,8 @@ public class Pelicula {
         System.out.println("----------------------------");
     }
 
-
+    public void MostrarPelicula(){
+        System.out.println("-Pelicula: "+this.getTitulo()+" / "+"Visualizaciones: "+this.getVisualizacion()+" / "+"Fecha Estreno: "+this.getFecha().getDia()+"/"+this.getFecha().getMes()+"/"+this.getFecha().getAnio());
+    }
 
 }
