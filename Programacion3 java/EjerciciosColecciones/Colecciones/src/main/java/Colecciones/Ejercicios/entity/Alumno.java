@@ -1,34 +1,15 @@
 package Colecciones.Ejercicios.entity;
 
-import java.util.Hashtable;
+import java.util.ArrayList;
 
-public class Alumno extends Hashtable<Integer,Materias> {
+public class Alumno {
 
-    private String nombre;
-    private String apellido;
     private Integer legajo;
-    private Integer edad;
+    private String Nombre;
 
-    private Materia materia;
+    private String Apellido;
+    private ArrayList<Materia> materias=new ArrayList<>();
 
-
-
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
 
     public Integer getLegajo() {
         return legajo;
@@ -38,20 +19,27 @@ public class Alumno extends Hashtable<Integer,Materias> {
         this.legajo = legajo;
     }
 
-    public Integer getEdad() {
-        return edad;
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setEdad(Integer edad) {
-        this.edad = edad;
+    public void setNombre(String nombre) {
+        Nombre = nombre;
     }
 
-
-    public Materia getMateria() {
-        return materia;
+    public String getApellido() {
+        return Apellido;
     }
 
-    public void setMateria(Materia materia) {
-        this.materia = materia;
+    public void setApellido(String apellido) {
+        Apellido = apellido;
+    }
+
+    public ArrayList<Materia> getMaterias() {
+        return materias;
+    }
+
+    public void setMaterias(ArrayList<Materia> materias) {
+        this.materias = materias;
     }
 }

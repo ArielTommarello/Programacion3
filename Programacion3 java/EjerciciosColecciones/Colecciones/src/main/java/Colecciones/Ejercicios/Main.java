@@ -71,24 +71,16 @@ public class Main {
         System.out.println(".........................");
         System.out.println("Ejercicio2");
 
-        //declaramos los alumnos.
-        Alumno alumnos=new Alumno();
-        //ingresamos alumno a buscar
-        Materias materias=alumnos.get(1);
-        Materia s=materias.get(001);
-        if (s==null)
-        {
-            s=new Materia();
-            s.setCodMateria(001);
-            s.setNota1(10);
-            s.setNota2(5);
+        //Inicializar Alumno
 
 
-        }
-        else
-        {
-            System.out.println("Materia: "+s.getMateria()+);
-        }
+
+        Hashtable<Integer,Alumno> alumnos = new Hashtable<Integer, Alumno>();
+
+        alumnos.put(001,new Alumno(001,"ariel","tommarello"));
+        Materia materias=new Materia();
+
+
 
 
     }
