@@ -1,11 +1,9 @@
 package Colecciones.Ejercicios;
 
-import Colecciones.Ejercicios.entity.CriterioOrdenDescEstreno;
-import Colecciones.Ejercicios.entity.CriterioOrdenVisualizaciones;
-import Colecciones.Ejercicios.entity.Fecha;
-import Colecciones.Ejercicios.entity.Pelicula;
+import Colecciones.Ejercicios.entity.*;
 
 import java.util.Collections;
+import java.util.Hashtable;
 import java.util.LinkedList;
 
 public class Main {
@@ -71,6 +69,26 @@ public class Main {
             pel.get(i).MostrarPelicula();
         }
         System.out.println(".........................");
+        System.out.println("Ejercicio2");
+
+        //declaramos los alumnos.
+        Alumno alumnos=new Alumno();
+        //ingresamos alumno a buscar
+        Materias materias=alumnos.get(1);
+        Materia s=materias.get(001);
+        if (s==null)
+        {
+            s=new Materia();
+            s.setCodMateria(001);
+            s.setNota1(10);
+            s.setNota2(5);
+
+
+        }
+        else
+        {
+            System.out.println("Materia: "+s.getMateria()+);
+        }
 
 
     }
