@@ -1,23 +1,22 @@
-from Ejercicio3Practica.T_Sistema import T_Sistema
-from Ejercicio3Practica.T_Usuario import T_Usuario
+from T_Sistema import T_Sistema
+from T_Usuario import T_Usuario
 
 
 class Sistema_Operativo:
 
-   
     def crearTareaUsu(self,nombre,prioridad,tiempo):
         usu=T_Usuario
-        usu.set_nombre(nombre)
-        usu.set_prioridad(prioridad)
-        usu.set_tiempo_ejecucion(tiempo)
+        usu.set_nombre(usu,nombre)
+        usu.set_prioridad(usu,prioridad)
+        usu.set_tiempo_ejecucion(usu,tiempo)
         return usu
 
 
     def crearTareaSis(self,nombre,prioridad,tiempo):
         sis=T_Sistema
-        sis.set_nombre(nombre)
-        sis.set_prioridad(prioridad)
-        sis.set_tiempo_ejecucion(tiempo)
+        sis.set_nombre(self,nombre)
+        sis.set_prioridad(self,prioridad)
+        sis.set_tiempo_ejecucion(self,tiempo)
         return sis
 
 
@@ -35,10 +34,10 @@ class Sistema_Operativo:
             print("Secuencial Finalizado")      
 
     def Prioritario(self,lista1,lista2):
-        lista1.sort(key=get_prioridad(_prioridad),reverse=True)
+        lista1.sort(key=lista1.get_prioridad(_prioridad),reverse=True)
 
         n=lista1.get_prioridad()
-        lista2.sort(key=get_prioridad(_prioridad),reverse=True)
+        lista2.sort(key=lista2.get_prioridad(_prioridad),reverse=True)
         m=lista2.get_prioridad()
 
         while n!=0:

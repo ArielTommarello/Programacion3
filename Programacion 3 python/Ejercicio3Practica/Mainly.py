@@ -14,26 +14,19 @@ class Mainly:
               
         acc=Sistema_Operativo
 
-        usu=acc.crearTareaUsu("tarea1",1,190)
+        usu=acc.crearTareaUsu(acc,"tarea1",1,190)
         listaU.append(usu)
-        usu=acc.crearTareaUsu("tarea2",0,110)
+        usu=acc.crearTareaUsu(acc,"tarea2",0,110)
         listaU.append(usu)
-        usu=acc.crearTareaUsu("tarea3",0,190)
+        usu=acc.crearTareaUsu(acc,"tarea3",0,190)
         listaU.append(usu)
-        usu=acc.crearTareaUsu("tarea4",1,110)
+        usu=acc.crearTareaUsu(acc,"tarea4",1,110)
         listaU.append(usu)   
 
-        sis=acc.crearTareaSis("TareaS1",9,120)
-        listaS.append(sis)
-        sis=acc.crearTareaSis("TareaS2",7,1203)
-        listaS.append(sis)
-        sis=acc.crearTareaSis("TareaS3",1,190)
-        listaS.append(sis)
-        sis=acc.crearTareaSis("TareaS4",0,120)
-        listaS.append(sis)
-
-
-        acc.Prioritario(listaS,listaU)
+        for us in len(listaU):            
+           print(f"Nombre: {us._nombre}")
+            
+        
 
     if __name__ == '__main__':
         main()
