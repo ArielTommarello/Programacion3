@@ -2,19 +2,21 @@ package Colecciones.Ejercicios.entity;
 
 public class Materia {
 
-    private String Materia;
+    private String nombre;
     private boolean cursa;
     private double nota1;
     private double nota2;
 
+    public Materia (String n ,boolean c,double n1,double n2){
 
-    public String getMateria() {
-        return Materia;
+        nombre=n;
+        cursa=c;
+        nota1=n1;
+        nota2=n2;
+
     }
 
-    public void setMateria(String materia) {
-        Materia = materia;
-    }
+
 
     public boolean isCursa() {
         return cursa;
@@ -38,5 +40,13 @@ public class Materia {
 
     public void setNota2(double nota2) {
         this.nota2 = nota2;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

@@ -1,27 +1,36 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+Directorios <|---- Archivos
+Directorios <|---- Links
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+class Archivos{
 
-class ArrayList {
-Object[] elementData
-size()
+-String nombre
+-double tamaño
+----
+setters y getters
+
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Directorios{
+-String nombre
+-double tamaño
+-ArrayList<Archivos>:NewArrayList
+----
+setters y getters
+}
+
+
+class Links{
+
+-String nombre
+-double tamaño
+-boolean conectado
+----
+setters y getters
+
 }
 
 @enduml

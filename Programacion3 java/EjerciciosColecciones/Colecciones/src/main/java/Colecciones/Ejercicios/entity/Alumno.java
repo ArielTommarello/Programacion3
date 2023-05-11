@@ -11,6 +11,14 @@ public class Alumno {
     private ArrayList<Materia> materias=new ArrayList<>();
 
 
+    public Alumno(Integer l,String n,String ap,ArrayList<Materia>m){
+        legajo=l;
+        Nombre=n;
+        Apellido=ap;
+        materias=m;
+    }
+
+
     public Integer getLegajo() {
         return legajo;
     }

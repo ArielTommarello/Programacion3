@@ -2,9 +2,7 @@ package Colecciones.Ejercicios;
 
 import Colecciones.Ejercicios.entity.*;
 
-import java.util.Collections;
-import java.util.Hashtable;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -59,6 +57,7 @@ public class Main {
         Collections.sort(pel,new CriterioOrdenVisualizaciones());
         for (int i=0;i<pel.size();i++){
             pel.get(i).MostrarPelicula();
+
         }
 
         System.out.println(".........................");
@@ -73,12 +72,25 @@ public class Main {
 
         //Inicializar Alumno
 
+        ArrayList<Materia>p1=new ArrayList<>();
+        p1.add(0,new Materia("Matematica",false,5,7));
+        p1.add(1,new Materia("Ingles",true,10,7));
+        p1.add(2,new Materia("Literatura",false,3,7));
+        p1.add(3,new Materia("Programacion",false,1,2));
+
+        ArrayList<Materia>p2=new ArrayList<>();
+        p2.add(0,new Materia("Matematica",true,8,7));
+        p2.add(1,new Materia("Ingles",false,10,7));
+        p2.add(2,new Materia("Literatura",false,3,7));
+        p2.add(3,new Materia("Programacion",false,1,2));
 
 
-        Hashtable<Integer,Alumno> alumnos = new Hashtable<Integer, Alumno>();
+        HashSet<Alumno> al=new HashSet<>();
 
-        alumnos.put(001,new Alumno(001,"ariel","tommarello"));
-        Materia materias=new Materia();
+        al.add(new Alumno(001,"Ariel","tommarello",p1));
+        al.add(new Alumno(002,"Ariel","tommarello",p2));
+
+
 
 
 
